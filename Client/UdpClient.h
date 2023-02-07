@@ -7,40 +7,39 @@
 class CUdpClient
 {
 public:
-    enum class EchoState
-    {
-        eNONE,
+	enum class EchoState
+	{
+		eNONE,
 		eFAIL,
-        eSENT,
-		
-        eRECEIVED,
-		//eRECEIVED_FAIL,
-        eREACH_MAX_TRY
-    };
+		eSENT,
 
-    int32_t init(std::string_view ip, int32_t port, int32_t maxRetryCount);
+		eRECEIVED,
+		eREACH_MAX_TRY
+	};
+
+	int32_t init(std::string_view ip, int32_t port, int32_t maxRetryCount);
 	int32_t sendMsg(std::string_view message);
-	
-    void update();    
 
-    EchoState getState() const;
+	void update();
+
+	EchoState getState() const;
 	bool isFailed() const;
-	
+
 private:
-    void resendMsg();
-    int32_t getWaitTimeMs(int32_t failCount) const;
+	void resendMsg();
+	int32_t getWaitTimeMs(int32_t failCount) const;
 
 
 
 private:
 	int32_t m_MaxRetryCount{};
-	int32_t m_retryCount{};
-	
-    std::string m_sendingMsg;
+	int32_t m_RetryCount{};
 
-    int m_Socket{};
-    EchoState m_State{};
-    
+	std::string m_SendingMsg;
+
+	int m_Socket{};
+	EchoState m_State{};
+
 
 
 

@@ -1,2 +1,3 @@
-gcc *.cpp -lm -o client -std=gnu++17 -lstdc++
+gcc *.cpp -lm -o client -std=gnu++17 -lstdc++ -O2
+
 
