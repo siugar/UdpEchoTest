@@ -1,0 +1,2 @@
+gcc *.cpp -lm -o client -std=gnu++17 -lstdc++
+
