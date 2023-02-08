@@ -11,11 +11,13 @@ HOW TO BUILD:
 
 HOW TO RUN:
 1. server --ip [server ip] --port [server port]
+
    [Default]
    server ip: 127.0.0.1
    server port: 1212
    
 2. client --ip [server ip] --port [server port] --message [your message] --max_retry [max retry count]
+
    [Default]
    server ip: 127.0.0.1
    server port: 1212
