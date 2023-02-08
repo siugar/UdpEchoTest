@@ -25,6 +25,7 @@ HOW TO RUN:
    max_retry: 10
 
    Note:
+   
    The interval between each retry basically follow the expontential backoff algorithm.
    I slightly change the random factor to prevent the the collisions of clients when the retry interval is bound to 
    the maximum 8s(The requirement in the test). The random factor of the new way is all suitable for the retry 
