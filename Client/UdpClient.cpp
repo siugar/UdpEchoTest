@@ -158,7 +158,7 @@ int32_t CUdpClient::getWaitTimeMs(int32_t failCount) const {
 
 		wait_interval = ((base * multiplier^n) <= max interval) * (1 - random_interval_ratio[0.0 ~ 0.2))
 
-		Original Reference: wait_interval = (base * 2^n) +/- (random_interval)  https://www.baeldung.com/resilience4j-backoff-jitter
+		Original Reference: wait_interval = (base * multiplier^n) +/- (random_interval)  https://www.baeldung.com/resilience4j-backoff-jitter
 	*/
 
 	int32_t result = BASE * pow(MULTIPLIER, failCount);
