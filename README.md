@@ -15,6 +15,7 @@ HOW TO RUN:
    [Default]
    
    server ip: 127.0.0.1
+   
    server port: 1212
    
 2. client --ip [server ip] --port [server port] --message [your message] --max_retry [max retry count]
