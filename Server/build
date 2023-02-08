@@ -1,2 +1,2 @@
-gcc *.cpp -o server -std=gnu++17 -lstdc++ -O2
+gcc *.cpp -o server -std=gnu++17 -lstdc++ -O3
 
