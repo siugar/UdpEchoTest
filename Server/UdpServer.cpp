@@ -56,7 +56,7 @@ void CUdpServer::update() {
 	printf("received: '%s' from client %s\n", buffer,
 		   inet_ntoa(clientAddress.sin_addr));
 
-	// send same content back to the client ("echo")
+	// send same content back to the client
 	sendto(m_Socket, buffer, len, 0, (struct sockaddr*)&clientAddress,
 		   sizeof(clientAddress));
 

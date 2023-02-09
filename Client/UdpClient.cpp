@@ -115,12 +115,12 @@ void CUdpClient::update() {
 	}
 
 
-	// socket address used to store client address
+	// socket address used to store target address
 	struct sockaddr_in targetAddress;
 	socklen_t targetAddressLen = sizeof(targetAddress);
 
 	char buffer[BUFFER_SIZE];
-	// read content into buffer from an incoming client
+	// read content into buffer from an incoming message
 	int len = recvfrom(m_Socket, buffer, sizeof(buffer), 0,
 					   (struct sockaddr*)&targetAddress,
 					   &targetAddressLen);
